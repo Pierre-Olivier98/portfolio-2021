@@ -1,0 +1,23 @@
+.has-js {
+    [data-scrolly='fromSkew'] {
+        opacity: 0;
+        transition: all 0.6s ease-out;
+        transform: skew(25deg);
+
+        &.is-active {
+            opacity: 1;
+            transform: skew(0deg);
+        }
+    }
+
+    [data-scrolly='fromScaleX'] {
+        opacity: 0;
+        transition: all 0.6s ease-out;
+        transform: scaleX(0);
+
+        &.is-active {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+    }
+}
