@@ -1,0 +1,22 @@
+/* ==========================================================================
+ propos / components
+ ========================================================================== */
+
+.propos {
+   text-align: center;
+   
+   h2{
+       font-size: var(--font-size-h2);
+       margin: 10px 0;
+   }
+
+   p{
+       font-size: 1.5rem;
+       margin: 10px 0;
+   }
+
+   img{
+      width: 75%;
+      border: 10px solid var(--color-secondary);
+   }
+}
