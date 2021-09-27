@@ -1,10 +1,10 @@
-
+import Header from './components/Header';
 
 
 export default class ComponentFactory {
   constructor() {
     this.componentList = {
-      
+      Header, 
     };
 
     this.init();

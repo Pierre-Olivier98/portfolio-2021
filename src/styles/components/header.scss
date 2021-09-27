@@ -1,25 +1,31 @@
 /* ==========================================================================
-   header / components
+   header / component
    ========================================================================== */
-header {
-    background: var(--color-white);
-    padding: 20px 0;
+
+   .header {
+    --header-height: 100px;
+    --logo-width: 200px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: var(--header-height);
+    width: 100%;
+    z-index: 10;
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 20;
-    transform: translateY(0);
-    transition: all 0.4s $ease-out-quad;
-    top: 0;
+    transition: all 0.4s $ease-out-expo;
 
     &::before {
+        background-color: var(--color-primary);
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 2;
+        z-index: 1;
     }
 
     @media screen and (min-width: $breakpoint-md) {
@@ -29,17 +35,23 @@ header {
     .header-is-hidden.is-scrolling-down & {
         transform: translateY(-100%) translateY(4px);
     }
+}
 
-    .wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+.header__brand {
+    width: var(--logo-width);
+    position: relative;
+    z-index: 10;
+
+    @media screen and (min-width: $breakpoint-md) {
+        position: absolute;
+        margin: auto;
     }
 }
+
 .header__toggle {
-    --bar-width: 30px;
-    --bar-height: 5px;
-    --bar-spacer: 3px;
+    --bar-width: 50px;
+    --bar-height: 8px;
+    --bar-spacer: 6px;
     background-color: transparent;
     border: none;
     outline: none;
@@ -52,7 +64,7 @@ header {
     z-index: 10;
 
     span {
-        background: var(--color-primary);
+        background: var(--color-tertiary);
         border-radius: 3px;
         display: block;
         height: var(--bar-height);
@@ -91,101 +103,116 @@ header {
             }
         }
     }
-    @media screen and (min-width: $breakpoint-md) {
-        display: none;
-    }
+
+    
 }
 
-/*
-   nav-primary
-   ========================================================================== */
 .nav-primary {
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-menu);
     position: absolute;
-    overflow-y: auto;
-    width: 100%;
-    height: 100vh;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100vh;
+    padding-top: var(--header-height);
     display: flex;
     z-index: 1;
-    transition: all 0.4s $ease-out-expo;
-    transform: translateX(100%);
+    transition: all .4s $ease-out-expo;
+    transform: translateY(-100%);
 
-    @media screen and (min-width: $breakpoint-md) {
-        transform: none;
-        position: relative;
-        height: auto;
-        width: auto;
-        padding-top: 0;
-        display: block;
-        z-index: 2;
-    }
+    
 
     .nav-is-active & {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
     ul {
-        width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         list-style: none;
         padding: 0;
+        width: 100%;
+        margin: auto;
+        transform: translateY(-70%);
         opacity: 0;
 
         .nav-is-active & {
             transform: translateY(0);
             opacity: 1;
-            transition: all 0.6s 0.3s $ease-out-back;
+            transition: all .6s  .3s $ease-out-back;
         }
 
         @media screen and (min-width: $breakpoint-md) {
             flex-direction: row;
-        }
-
-        a {
-            width: 100%;
-            display: block;
-            text-align: center;
-        }
-    }
-
-    @media screen and (min-width: $breakpoint-md) {
-        background: none;
-        padding-top: 0;
-        position: relative;
-        height: auto;
-        width: auto;
-        transform: translateX(0%);
-        ul {
-            flex-direction: row;
             opacity: 1;
             transform: none;
         }
-        a {
-            color: var(--color-black);
-            padding: 10px;
+    }
 
-            &:hover {
-                color: var(--color-primary);
-            }
+    .nav-right {
+        @media screen and (min-width: $breakpoint-md){
+          margin-left: calc(var(--logo-width) + 40px);  
         }
+        
     }
 }
 
 .nav-primary__item {
-    @include fluid-type(32px, 60px);
-    // color: var(--color-white);
+    font-family: 'Bebas Neue', cursive;
+    font-size: var(--font-size-h2);
+    color: var(--color-white);
     text-transform: uppercase;
     padding: 0 20px;
+    margin: 15px 0;
     position: relative;
+    display: block;
+    text-align: center;
+
+    &::before {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 20px;
+        height: 2px;
+        width: calc(100% - 40px);
+        content: '';
+        background-color: white;
+        transform: scaleX(0);
+        transition: 0.3s all;
+    }
+
+    &:hover {
+        color: inherit;
+    }
 
     @media screen and (min-width: $breakpoint-md) {
-        font-size: inherit;
+        font-size: var(--font-size-h2);
+        color: var(--color-white);
+        padding: 0 20px;
+        position: relative;
         text-transform: none;
-        font-weight: 700;
+
+        &::before {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 20px;
+            height: 2px;
+            width: calc(100% - 40px);
+            content: '';
+            background-color: white;
+            transform: scaleX(0);
+            transition: 0.3s all;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: inherit;
+            &::before {
+                transform: scaleX(1);
+            }
+        }
     }
 }
 
