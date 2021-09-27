@@ -9,10 +9,10 @@ h4,
 h5,
 h6,
 .title-primary {
-    font-family: var(--font-primary);
+    font-family: var(--font-title);
     font-weight: bold;
     line-height: 1.4;
-    color: inherit;
+    color: var(--color-primary);
 }
 
 h1,

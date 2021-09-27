@@ -1,8 +1,5 @@
 // FONTS
-@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Raleway:wght@900&display=swap');
-$fa-font-path: '../assets/fonts';
-@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
-@import '../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Big+Shoulders+Text&display=swap');
 
 // TOOLS
 // mixins et fonctions utilisés globalement dans le SCSS (Sass)
@@ -38,18 +35,12 @@ $fa-font-path: '../assets/fonts';
 @import '../../node_modules/swiper/components/pagination/pagination.scss';
 @import '../../node_modules/swiper/components/scrollbar/scrollbar.scss';
 @import 'components/header';
-@import 'components/footer';
 @import 'components/hero';
-@import 'components/section';
-@import 'components/card';
-@import 'components/intro';
-@import 'components/news';
 @import 'components/button';
 @import 'components/gallery';
-@import 'components/wall';
 @import 'components/scrolly';
-@import 'components/modal';
 @import 'components/icons';
+@import 'components/projets';
 
 // UTILITIES
 // Utilitaires et classes auxiliaires avec possibilité de remplacer tout ce qui précède, par exemple masquer les éléments de la page
