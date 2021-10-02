@@ -149,6 +149,15 @@
             transition: all .6s  .3s $ease-out-back;
         }
 
+        li {
+            :hover {
+                color: var(--color-tertiary);
+            }
+            a {
+                color: var(--color-tertiary);
+            }
+        }
+
         
     }
 
