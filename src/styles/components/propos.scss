@@ -3,20 +3,118 @@
  ========================================================================== */
 
 .propos {
-   text-align: center;
+    text-align: center;
+    margin: 100px 0;
    
    h2{
-       font-size: var(--font-size-h2);
+       text-align: center;
+       font-size: 6rem;
        margin: 10px 0;
+       text-decoration: underline;
    }
 
    p{
+       text-align: center;
        font-size: 1.5rem;
-       margin: 10px 0;
+       margin: 40px 600px;
    }
 
-   img{
-      width: 75%;
+   .moi{
+      width: 24%;
       border: 10px solid var(--color-secondary);
+      margin: 40px 0;
+   }
+
+   .passions{
+        margin: 30px 0;
+
+        h3{
+            font-size: 3rem;
+            margin: 40px 0;
+        }
+
+        .passion{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: row;
+           .pas{
+               margin: 0;
+            text-align: center;
+                img{
+                    width: 50%;
+                }
+
+                p{
+                    margin: 0;
+                }
+            } 
+        }
+        
+       
+   }
+
+   .competences{
+
+    margin: 60px 0;
+       h3{
+           font-size: 3rem;
+       }
+
+       .logs{
+            img{
+                margin: 30px 20px;
+            }
+       }
+   }
+
+   .qualites{
+        h3{
+            font-size: 3rem;
+        }
+        
+        .quals{
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            .qualite{
+                margin: 30px 20px ;
+                text-align: center;
+
+                p{
+                    margin: 0;
+                }
+            }
+        }
+   }
+
+   .interets{
+
+    margin: 40px 0;
+       h3{
+           font-size: 3rem;
+           margin: 20px 0;
+       }
+
+       .interet{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: row;
+
+           .int{
+
+                margin: 20px 20px;
+               p{
+                   margin: 0;
+               }
+           }
+       }
+   }
+
+   button{
+       margin: 30px 0;
    }
 }

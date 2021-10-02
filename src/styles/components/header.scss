@@ -35,6 +35,11 @@
     .header-is-hidden.is-scrolling-down & {
         transform: translateY(-100%) translateY(4px);
     }
+
+    .icon{
+        color: var(--color-secondary);
+        z-index: 5;
+    }
 }
 
 .header__brand {
@@ -174,7 +179,7 @@
     }
 
     &:hover {
-        color: inherit;
+        color: white;
     }
 
     @media screen and (min-width: $breakpoint-md) {
