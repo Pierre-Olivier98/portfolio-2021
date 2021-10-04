@@ -1,10 +1,11 @@
 import Header from './components/Header';
-
+import Video from './components/Video';
 
 export default class ComponentFactory {
   constructor() {
     this.componentList = {
-      Header, 
+      Header,
+      Video, 
     };
 
     this.init();
