@@ -12,6 +12,7 @@ const path = require('path');
 
 // Plugins
 var WebpackNotifierPlugin = require('webpack-notifier');
+var SVGSpriteMapPlugin = require('svg-spritemap-webpack-plugin');
 
 const webpackConfig = {
   mode: process.env.NODE_ENV ? 'production' : 'development',
@@ -31,6 +32,20 @@ const webpackConfig = {
     // ensure that we get a production build of any dependencies
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"production"',
+    }),
+    new SVGSpriteMapPlugin(paths.assets.icons, {
+      output: {
+        filename: `../assets/icons.svg`,
+        svgo: {
+          plugins: [{ removeTitle: true }, { removeAttrs: { attrs: '(stroke|fill)' } }],
+        },
+      },
+      sprite: {
+        prefix: 'icon-',
+      },
+      styles: {
+        keepAttributes: false,
+      },
     }),
     new WebpackNotifierPlugin({
       skipFirstNotification: true,

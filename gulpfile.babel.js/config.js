@@ -32,6 +32,15 @@ export const paths = {
   },
   assets: {
     src: 'src/assets/**/*',
+    icons: 'src/assets/icons/**/*.svg',
     dest: 'dist/assets',
+  },
+  imagemin: {
+    test: /\.(svg)$/i,
+    pngquant: {},
+    gifsicle: {},
+    svgo: true, // svgo prefixes id with an hash, wich is bad with <use>
+    optipng: null, // has to be set to null since we use pngquant
+    jpegtran: null, // has to be set to null since we use MozJpg
   },
 };
