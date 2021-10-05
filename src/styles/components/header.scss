@@ -35,11 +35,6 @@
     .header-is-hidden.is-scrolling-down & {
         transform: translateY(-100%) translateY(4px);
     }
-
-    .icon{
-        color: var(--color-secondary);
-        z-index: 5;
-    }
 }
 
 .header__brand {
@@ -63,14 +58,13 @@
     cursor: pointer;
 
     padding: 0;
-    margin-left: auto;
     position: relative;
     width: var(--bar-width);
     height: var(--bar-width);
     z-index: 10;
 
     span {
-        background: var(--color-tertiary);
+        background: var(--color-white);
         border-radius: 3px;
         display: block;
         height: var(--bar-height);
@@ -110,7 +104,9 @@
         }
     }
 
-    
+    @media screen and (min-width: $breakpoint-md) {
+        display: none;
+    }
 }
 
 .nav-primary {
@@ -122,11 +118,20 @@
     height: 100vh;
     padding-top: var(--header-height);
     display: flex;
+    overflow-y: auto;
     z-index: 1;
     transition: all .4s $ease-out-expo;
     transform: translateY(-100%);
 
-    
+    @media screen and (min-width: $breakpoint-md) {
+        transform: none;
+        position: relative;
+        height: auto;
+        width: auto;
+        padding-top: 0;
+        display: block;
+        z-index: 2;
+    }
 
     .nav-is-active & {
         transform: translateY(0);
@@ -142,34 +147,44 @@
         margin: auto;
         transform: translateY(-70%);
         opacity: 0;
+        overflow-y: hidden;
 
         .nav-is-active & {
             transform: translateY(0);
             opacity: 1;
             transition: all .6s  .3s $ease-out-back;
         }
-
         li {
             :hover {
-                color: var(--color-tertiary);
+                color: var(--color-white);
+                text-decoration: underline;
             }
             a {
                 color: var(--color-tertiary);
+                
             }
         }
 
-        
+        @media screen and (min-width: $breakpoint-md) {
+            flex-direction: row;
+            opacity: 1;
+            transform: none;
+        }
     }
 
-    
+    .nav-right {
+        @media screen and (min-width: $breakpoint-md){
+          margin-left: calc(var(--logo-width) + 40px);  
+        }
+        
+    }
 }
 
 .nav-primary__item {
-    font-family: 'Bebas Neue', cursive;
-    font-size: var(--font-size-h2);
+    font-size: var(--font-size-h1);
+    color: var(--color-white);
     text-transform: uppercase;
     padding: 0 20px;
-    margin: 15px 0;
     position: relative;
     display: block;
     text-align: center;
@@ -188,11 +203,11 @@
     }
 
     &:hover {
-        color: white;
+        color: inherit;
     }
 
     @media screen and (min-width: $breakpoint-md) {
-        font-size: var(--font-size-h1);
+        font-size: var(--font-size-h2);
         color: var(--color-white);
         padding: 0 20px;
         position: relative;
@@ -226,3 +241,6 @@
         overflow: hidden;
     }
 }
+   
+  
+   

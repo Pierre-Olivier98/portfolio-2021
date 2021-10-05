@@ -1,5 +1,5 @@
 import ComponentFactory from './ComponentFactory';
-
+import Icons from './utilities/Icons';
 
 class Main {
   constructor() {

@@ -14,21 +14,21 @@
         <div class="site-container" data-component="Scrolly">
             <header class="header" data-component="Header" data-scroll-limit="0.1">
                 <a href="index.html" class="header__brand">
-                  <img src="assets/images/poc.png" alt="poc">  
+                    <img src="assets/images/poc.png" alt="logo" />
                 </a>
                 <nav class="nav-primary">
                     <ul>
                         <li>
-                            <a href="#" class="nav-primary__item">Accueil</a>
+                            <a href="index.html" class="nav-primary__item">Accueil</a>
                         </li>
                         <li>
-                            <a href="#" class="nav-primary__item">Mes projets</a>
+                            <a href="#projets" class="nav-primary__item">Mes projets</a>
+                        </li>
+                        <li class="nav-right">
+                            <a href="#propos" class="nav-primary__item">À propos</a>
                         </li>
                         <li>
-                            <a href="#" class="nav-primary__item">À propos</a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-primary__item">Contact</a>
+                            <a href="#contact" class="nav-primary__item">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -43,13 +43,15 @@
                     <h1>Pierre-Olivier Croteau</h1>
                     <p>Créateur de contenus vidéos et illustrations</p>
                 </div>
-                <div class="video" data-component="Video" data-video-id="1PgYlbbBn_g">
+                <div class="video" data-component="Video" data-video-id="sr8zqG-DXVE">
                     <div class="video_media js-video">
                         <img class="js-poster" src="assets/images/poster.png" alt="poster">
+                        
+                        <img class="icon play" src="assets/images/coolicon.png" alt="play">
                     </div>
                 </div>
             </section>
-            <section class="projets">
+            <section id="projets" class="projets">
                 <h2>Mes projets</h2>
                 <div class="projet">
                     <img src="./assets/images/alexa 1.png" alt="alexa">
@@ -88,15 +90,16 @@
                 <div class="projet">
                     <img src="./assets/images/jaygeeker.png" alt="jaygeeker">
                     <h3>Jay Geeker</h3>
+                    <p>Projet personnel en référence avec l’artiste jay geeker réalisant du pop art. En collaboration avec yousaif dion hussain</p>
                     <div class="logiciels">
                         <img src="./assets/images/audition.png" alt="audition">
                         <img src="./assets/images/Ae 4.png" alt="ae">
                     </div>
-                    <p>Projet personnel en référence avec l’artiste jay geeker réalisant du pop art. En collaboration avec yousaif dion hussain</p>
+                    
                     <a href="https://www.youtube.com/watch?v=hPOATWC_51s"><button class="button">Voir plus</button></a>
                 </div>
             </section>
-            <section class="propos">
+            <section id="propos" class="propos">
                 <h2>À propos</h2>
                 <p>Comment allez-vous? Vous vous trouvez dans mon univers visuel! Depuis mon jeune âge, je suis passionné de cinéma, d’animation 2D/3D et de photographie.</p>
                 <img class="moi" src="./assets/images/moi.png" alt="moi">
@@ -164,13 +167,20 @@
                 </div>
                 <button class="button">Ma vidéo</button>
             </section>
-            <section class="contact">
+            <section id="contact" class="contact">
                 <h2>Contact</h2>
                 <p>N’hésitez pas à me contacter!</p>
                 <p>paolivier98@outlook.com</p>
                 
                 <p>514-980-0610</p>
                 <button class="button">MON CV</button>
+
+                <div class="reseaux">
+                    <a href="https://www.linkedin.com/in/pierre-olivier-croteau-67b135221/"><img src="assets/images/linkedin.png" alt="linkedin"></a>
+                    <a href="https://www.youtube.com/channel/UCubpNyeDjXusc-W2ZlkUZdw"><img src="assets/images/youtube.png" alt="youtube"></a>
+                    <a href="https://www.behance.net/pierre-croteau"><img src="assets/images/behance.png" alt="behance"></a>
+                </div>
+                
             </section>
     </body>
 </html>
