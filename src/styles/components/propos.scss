@@ -86,11 +86,13 @@
     margin: 60px 0;
        h3{
            font-size: 3rem;
+           margin-bottom: 10px;
        }
 
        .logs{
             img{
-                margin: 30px 20px;
+                margin: 30px 20px 0 20px;
+                width: 12%;
             }
        }
    }
@@ -98,6 +100,7 @@
    .qualites{
         h3{
             font-size: 3rem;
+            margin-bottom: 20px;
         }
         
         .quals{
@@ -107,7 +110,7 @@
             align-items: center;
             flex-direction: row;
             .qualite{
-                margin: 50px;
+                margin: 0 50px;
                 text-align: center;
 
                 p{
