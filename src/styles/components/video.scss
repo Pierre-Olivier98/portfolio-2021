@@ -12,6 +12,14 @@
 
     height: 1000px;
 
+       @media only screen and (max-width: $breakpoint-md){
+           height: 500px;
+       }
+
+       @media only screen and (max-width: $breakpoint-sm){
+           height: 250px;
+       }
+
     img {
         object-fit: contain;
         height: 50%;
