@@ -6,9 +6,17 @@
     margin: 30px 0;
     text-align: center;
 
+    @media only screen and (max-width: $breakpoint-sm){
+        margin: 0;
+    }
+
     h2{
         font-size: 6rem;
         margin: 10px 0;
+
+        @media only screen and (max-width: $breakpoint-sm){
+            font-size: 3rem;
+        }
     }
 
     p{
@@ -17,9 +25,16 @@
     }
 
     .reseaux{
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
         img{
             margin: 60px 40px;
+
+            @media only screen and (max-width: $breakpoint-sm){
+                margin: 60px 20px;
+            }
         }
     }
     
