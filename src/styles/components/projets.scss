@@ -3,7 +3,7 @@
  ========================================================================== */
 
 .projets {
-    margin: 150px 0;
+    
 
     @media only screen and (max-width: $breakpoint-sm){
         margin: 50px 0;
@@ -40,6 +40,13 @@
 
         @media only screen and (max-width: $breakpoint-md){
             margin: 80px 0;
+        }
+
+        .size{
+            @media only screen and (min-width: $breakpoint-md){
+               width: 60%; 
+            }
+            
         }
 
         .projet{
@@ -98,6 +105,91 @@
             }
         }   
         
+    }
+
+    .flip{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+
+        margin: 150px 0;
+
+        @media only screen and (max-width: $breakpoint-sm){
+            
+            flex-direction: column;
+            
+            
+            margin: 40px 0;
+        }
+
+        @media only screen and (max-width: $breakpoint-md){
+            margin: 80px 0;
+            flex-direction: column;
+        }
+
+        .size{
+            @media only screen and (min-width: $breakpoint-md){
+                width: 60%;
+            }
+            
+        }
+
+        .projet{
+            font-family: var(--font-title);
+            margin: 20px 0;
+            color: var(--color-primary);
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            margin: 0 auto;
+            
+
+            h3{
+                font-size: 4rem;
+                margin: 10px 0;
+                text-decoration: underline;
+
+                @media only screen and (max-width: $breakpoint-sm){
+                    font-size: 2rem;
+                    margin-top: 40px;
+                }
+
+                @media only screen and (max-width: $breakpoint-md){
+                    margin-top: 70px;
+                }
+            }
+
+            .adobe{
+                margin: 20px 0;
+            }
+            
+            .logiciels{
+                margin: 20px;
+                
+                img{
+                    margin: 0 20px;
+                }
+            }
+
+            p{
+                text-align: center;
+                font-size: 1.5rem;
+                margin: 10px 0;
+                padding: 0 40px;
+            }
+
+            button{
+                margin: 10px 0;
+            }
+
+            .bord{
+                width: 100%;
+            }
+        }   
     }
         
        
