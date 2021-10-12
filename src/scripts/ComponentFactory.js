@@ -1,11 +1,13 @@
 import Header from './components/Header';
 import Video from './components/Video';
+import Scrolly from './components/Scrolly';
 
 export default class ComponentFactory {
   constructor() {
     this.componentList = {
       Header,
-      Video, 
+      Video,
+      Scrolly, 
     };
 
     this.init();
