@@ -12,6 +12,8 @@ export default class Video {
       this.videoId = this.element.dataset.videoId; // Chercher le Id du vidéo
       this.autoplay = this.poster ? 1 : 0; // Variable global qui retourne 0 ou 1 en présence ou non d'un poster image
       this.playerReady = false; // Indique que la vidéo n'est pas prêt
+      this.controls = 0;
+      this.disablekb = 1;
   
       Video.instances.push(this); // Permet de pousser l'instance de la classe Video dans le tableau
   
@@ -58,7 +60,7 @@ export default class Video {
         height: '100%',
         width: '100%',
         videoId: this.videoId,
-        playerVars: { rel: 1, autoplay: this.autoplay, loop: 1, playlist: this.videoId,}, 
+        playerVars: { rel: 1, autoplay: this.autoplay, controls: this.controls, disablekb: this.disablekb, loop: 1, playlist: this.videoId,}, 
         events: {
           onReady: () => {
             const observer = new IntersectionObserver(this.watch.bind(this), {
