@@ -6,6 +6,7 @@ export default class Header {
     this.scrollLimit = 0.1;
     this.lastScrollPosition = 0;
     this.html = document.documentElement;
+    
 
     this.init();
     this.initNavMobile();
@@ -15,6 +16,12 @@ export default class Header {
     console.log('voici le header');
 
     window.addEventListener('scroll', this.onScroll.bind(this));
+
+    document.querySelectorAll('.bouton__menu').forEach(item => {
+      item.addEventListener('click', event => {
+        this.html.classList.remove('nav-is-active');
+      })
+    })
   }
 /** Permet de savoir la position */
   onScroll(event) {
